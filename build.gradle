@@ -45,7 +45,7 @@ ext {
     espressoVersion = '3.0.2'
 
     //room
-    //roomVersion = '1.1.1-rc1'
+    roomVersion = '1.1.1-rc1'
 
     //http - rest
     //retrofitVersion = '2.3.0'
@@ -57,4 +57,7 @@ ext {
 
     //lifecycle
     lifecycleVersion = "1.1.1"
+
+    //coroutines
+    kotlinCoroutinesVersion = '0.22.1'
 }

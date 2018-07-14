@@ -8,15 +8,15 @@
   android:background="@drawable/rock_background"
   tools:context=".presentation.show_home.view.MainActivity">
 
-<android.support.design.widget.CoordinatorLayout
-  android:id="@+id/coordinatorLayout"
-  android:layout_above="@+id/bottom_navigation"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
+  <android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinatorLayout"
+    android:layout_above="@+id/bottom_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-  <include layout="@layout/container" />
+    <include layout="@layout/container" />
 
-</android.support.design.widget.CoordinatorLayout>
+  </android.support.design.widget.CoordinatorLayout>
   <android.support.design.widget.BottomNavigationView
     android:id="@+id/bottom_navigation"
     android:layout_alignParentBottom="true"
