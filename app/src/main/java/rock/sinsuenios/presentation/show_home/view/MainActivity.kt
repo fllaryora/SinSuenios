@@ -12,15 +12,13 @@ import rock.sinsuenios.R
 import android.support.design.widget.BottomNavigationView
 import android.view.MenuItem
 import android.support.v4.app.Fragment
-import android.view.View
 import rock.sinsuenios.presentation.show_dashboard.DashboardFragment
 import rock.sinsuenios.presentation.show_notifications.view.NotificationFragment
 
 
 class MainActivity : AppCompatActivity() {
 
-    private var mBottomNavigationView: BottomNavigationView? = null
-
+    private lateinit var mBottomNavigationView: BottomNavigationView
     override fun onCreate(savedInstanceState: Bundle?) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState)
@@ -44,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupBottomNavigation() {
         mBottomNavigationView = findViewById(R.id.bottom_navigation) as BottomNavigationView
-        mBottomNavigationView!!.setOnNavigationItemSelectedListener(object : BottomNavigationView.OnNavigationItemSelectedListener {
+        mBottomNavigationView.setOnNavigationItemSelectedListener(object : BottomNavigationView.OnNavigationItemSelectedListener {
             override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
                 when (item.getItemId()) {
