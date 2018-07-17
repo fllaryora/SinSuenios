@@ -1,5 +1,6 @@
 package rock.sinsuenios.data.database.dao
 
+import android.arch.paging.DataSource
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Delete
 import android.arch.persistence.room.Insert
@@ -10,8 +11,8 @@ import rock.sinsuenios.data.database.entities.Tracks
 @Dao
 interface TracksDAO {
 
-    @get:Query("SELECT track_table.* FROM track_table")
-    val tracks: List<Tracks>
+    @Query("SELECT track_table.* FROM track_table")
+    fun tracks(): DataSource.Factory<Int,Tracks>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(tracks: Tracks)
