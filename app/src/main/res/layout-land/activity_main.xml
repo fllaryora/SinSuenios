@@ -6,7 +6,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:background="@drawable/rock_background"
-  tools:context=".presentation.show_home.view.MainActivity">
+  tools:context=".presentation.MainActivity">
 
   <android.support.design.widget.CoordinatorLayout
     android:id="@+id/coordinatorLayout"

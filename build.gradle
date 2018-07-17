@@ -60,4 +60,13 @@ ext {
 
     //coroutines
     kotlinCoroutinesVersion = '0.22.1'
+
+    //Glide
+    glideVersion = '4.0.0'
+
+    //dagger
+    daggerVersion = '2.11'
+
+    //pagign
+    pagingVersion = "1.0.0"
 }
