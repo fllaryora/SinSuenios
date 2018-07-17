@@ -1,4 +1,4 @@
-package rock.sinsuenios.domain.interactor
+package rock.sinsuenios.data.functional
 
 /**
  * Copyright (C) 2018 Fernando Cejas Open Source Project
@@ -34,8 +34,8 @@ sealed class Either<out L, out R> {
     val isRight get() = this is Right<R>
     val isLeft get() = this is Left<L>
 
-    fun <L> left(a: L) = Either.Left(a)
-    fun <R> right(b: R) = Either.Right(b)
+    fun <L> left(a: L) = Left(a)
+    fun <R> right(b: R) = Right(b)
 
     fun either(fnL: (L) -> Any, fnR: (R) -> Any): Any =
             when (this) {

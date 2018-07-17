@@ -1,4 +1,4 @@
-package rock.sinsuenios.domain.interactor
+package rock.sinsuenios.data.exception
 
 /**
  * Base Class for handling errors/failures/exceptions.
