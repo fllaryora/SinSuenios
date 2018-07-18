@@ -3,7 +3,7 @@ package rock.sinsuenios
 import android.app.Application
 import android.content.Context
 import android.preference.PreferenceManager
-
+import rock.sinsuenios.data.database.TrackPopulator
 
 
 class SinSueniosApplication : Application(){
@@ -32,8 +32,8 @@ class SinSueniosApplication : Application(){
     private fun intiDB() {
         val preferences = PreferenceManager.getDefaultSharedPreferences(this)
         if (!preferences.getBoolean(KEY_IS_DB_POPULATED, false)) {
-            //PokemonDBPopulator.with(this).populateDB()
-            //preferences.edit().putBoolean(KEY_IS_DB_POPULATED, true).apply()
+            TrackPopulator.with(this).populateDB()
+            preferences.edit().putBoolean(KEY_IS_DB_POPULATED, true).apply()
         }
     }
 

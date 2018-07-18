@@ -4,8 +4,14 @@
   <string name="title_dashboard">Songs</string>
   <string name="title_notifications">Notifications</string>
   <string name="text_notifications">Verifica en nuestras redes novedades sobre nuestras actividades</string>
-  <string name="band_text_info">fkjsdlfkjsldkfjlkdsjflksdjflksdjflkjsdlfkjlsdkjflksdjflkjslkdfjlsdfsdfsfdsfsdfsdfsdfdsfdsfsdffdsfsdfsdfdsfdsfdsfsdfsdfsdfsdfdsfsdfsf</string>
-  <string name="track_cicatrices">Es lo que dices,
+  <string name="band_text_info">Somos \'Sin Sueños\' porque al momento de formar nuestra banda se cumplio el nuestro.</string>
+  <string-array name="track_names">
+    <item>Cicatrices</item>
+    <!--<item>Hermoso sueño</item>-->
+  </string-array>
+
+  <string-array name="track_lyrics">
+    <item>Es lo que dices,
 lo que significan,
 camino entre vosotros
 pero no soy
@@ -37,6 +43,9 @@ es tu forma de ser
 inculta:
 Carente de experiencia
 e ilusa.
-Enfrento a la muerte y soy quien propicia mi suerte.</string>
+Enfrento a la muerte y soy quien propicia mi suerte.</item>
+
+  </string-array>
+
 
 </resources>

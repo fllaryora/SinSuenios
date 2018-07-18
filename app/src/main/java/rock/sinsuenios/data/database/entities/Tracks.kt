@@ -8,11 +8,11 @@ import java.util.*
 
 @Entity(tableName = "track_table")
 data class Tracks(@PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") var id: Long?,
+
                   @ColumnInfo(name = "track_name") var trackName: String,
                   @ColumnInfo(name = "lyric") var lyric: String,
                   @ColumnInfo(name = "track_song") var trackSong: Int,
                   var lastRefresh: Date) {
-    constructor() : this(null, "", "", 0, Date())
 
     /**
      * Used in pagining

@@ -17,6 +17,7 @@ import rock.sinsuenios.presentation.show_dashboard.viewmodel.TrackViewModel
 
 
 class DashboardFragment : Fragment() {
+
     private lateinit var mRecyclerView : RecyclerView
     companion object {
         fun newInstance(): DashboardFragment {

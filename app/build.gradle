@@ -88,8 +88,13 @@ dependencies {
     // Paging
 
     implementation "android.arch.paging:runtime:$rootProject.pagingVersion"
+
     // optional - RxJava support, currently in release candidate
     implementation "android.arch.paging:rxjava2:1.0.0-rc1"
+
+    // Rx
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.16'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
 }
 
 kotlin {
