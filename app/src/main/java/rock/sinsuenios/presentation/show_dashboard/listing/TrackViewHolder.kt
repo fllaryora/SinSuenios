@@ -10,25 +10,25 @@ import rock.sinsuenios.data.database.entities.Tracks
 class TrackViewHolder (itemView: View?): RecyclerView.ViewHolder(itemView) {
 
     private var ticketTextView: AppCompatTextView? = null
-    private var ticketImageView: AppCompatImageView? = null
+    //private var ticketImageView: AppCompatImageView? = null
 
     init {
         //La llamada al super del padre la hace en RecyclerView.ViewHolder(itemView)
         ticketTextView = itemView!!.findViewById(R.id.ticket_title) as AppCompatTextView
-        ticketImageView = itemView.findViewById(R.id.ticket_image) as AppCompatImageView
+        //ticketImageView = itemView.findViewById(R.id.ticket_image) as AppCompatImageView
     }
 
     fun bindTo(tracks: Tracks) {
         itemView.tag = tracks.id
         ticketTextView!!.text = tracks.trackName
-        ticketImageView!!.setImageResource(R.drawable.track)
+       // ticketImageView!!.setImageResource(R.drawable.track)
 
     }
 
     fun clear() {
         itemView.invalidate()
         ticketTextView!!.invalidate()
-        ticketImageView!!.invalidate()
+        //ticketImageView!!.invalidate()
     }
 
 }

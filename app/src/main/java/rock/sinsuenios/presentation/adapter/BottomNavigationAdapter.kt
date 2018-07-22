@@ -5,6 +5,9 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import java.util.*
 
+/**
+ * I live this class because i can re-use it in different activities
+ */
 class BottomNavigationAdapter(fragmentManager: FragmentManager) : FragmentStatePagerAdapter(fragmentManager) {
 
     private val mFragmentList = ArrayList<Fragment>()

@@ -23,14 +23,14 @@ android {
     }
 
     dataBinding {
-        enabled=true
+        enabled = true
     }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //kotlin
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     //kotlin coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.kotlinCoroutinesVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.kotlinCoroutinesVersion"
@@ -41,6 +41,7 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:${rootProject.supportLibraryVersion}"
     implementation "com.android.support.constraint:constraint-layout:${rootProject.constraintVersion}"
     implementation "com.android.support:support-vector-drawable:${rootProject.supportLibraryVersion}"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation "junit:junit:${rootProject.junitVersion}"
     androidTestImplementation "com.android.support.test:runner:${rootProject.runnerVersion}"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:${rootProject.espressoVersion}"
@@ -76,7 +77,6 @@ dependencies {
 
     //ticket-view
     implementation 'com.vipulasri:ticketview:1.0.5'
-
 
     //glide
     implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"

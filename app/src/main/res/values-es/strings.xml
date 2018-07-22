@@ -3,6 +3,27 @@
   <string name="title_home">Banda</string>
   <string name="title_dashboard">Canciones</string>
   <string name="title_notifications">Notificaciones</string>
+
   <string name="text_notifications">Verifica en nuestras redes novedades sobre nuestras actividades</string>
-  <string name="band_text_info">fkjsdlfkjsldkfjlkdsjflksdjflksdjflkjsdlfkjlsdkjflksdjflkjslkdfjlsdfsdfsfdsfsdfsdfsdfdsfdsfsdffdsfsdfsdfdsfdsfdsfsdfsdfsdfsdfdsfsdfsf</string>
+
+  <string name="disclamer">©2018. Reservados todos los derechos de los autores y compositores, del productor fonográfico, del editor, y de los intérpretes de las obras reproducidas en este ejemplar. Prohibida la reproducción, regrabación, alquiler, préstamo, canje, ejecución pública, y difusión por cualquier medio y procedimiento sin previa autorización o cualquier otro uso no autorizado. SADAIC - BIEM / AADI - CAPIF. Industria Argentina. Disco es Cultura.</string>
+
+  <string name="band_members">Integrantes de la banda</string>
+
+  <string name="on_guitar_and_vocals">En guitarra y voz:</string>
+  <string name="on_bass_and_chorus">En bajo y coros:</string>
+  <string name="on_guitar">En guitarras:</string>
+  <string name="on_guitar_and_chorus">En guitarras y coros:</string>
+  <string name="on_drums_and_chorus">En batería y coros:</string>
+  <string name="on_percussion">En percusión:</string>
+  <string name="on_acoustic_guitar">En acústicas:</string>
+
+  <string name="mastering">Masterizado:</string>
+  <string name="recorded_and_mixed">Grabado y Mezclado:</string>
+  <string name="mixing_technicians">Técnicos de mezcla:</string>
+  <string name="musical_production">Producción musical:</string>
+  <string name="artists_invited_to_play">Artistas invitados para tocar</string>
+  <string name="on_Cicatrices_album">en el Disco “Cicatrices”</string>
+  <string name="disks">Discos</string>
+
 </resources>

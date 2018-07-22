@@ -1,51 +1,95 @@
 <resources>
   <string name="app_name">Sin Sueños</string>
+
   <string name="title_home">Band</string>
   <string name="title_dashboard">Songs</string>
   <string name="title_notifications">Notifications</string>
-  <string name="text_notifications">Verifica en nuestras redes novedades sobre nuestras actividades</string>
-  <string name="band_text_info">Somos \'Sin Sueños\' porque al momento de formar nuestra banda se cumplio el nuestro.</string>
+
+  <string name="title_disks">Disks</string>
+  <string name="stars">Stars</string>
+
+  <string name="text_notifications">Check out our social networks news about us!</string>
+
+  <string name="band_text_info">We\'re \'Sin Sueños\' (Without Dreams) because when we form our band we fulfilled ours.</string>
+  <string name="disclamer">©2018. All rights are reserved for authors, composers, phonographic producer, editor, and performers of the works reproduced in this application. It is forbidden the reproduction, re-recording, rental, loan, exchange, public performance of musical works, and broadcast via any means of communication and procedure without prior authorization or any other unauthorized use. SADAIC - BIEM / AADI - CAPIF. Argentine industry. Disco es Cultura.</string>
+
+
+  <string name="band_members">Band members</string>
+
+  <string name="on_guitar_and_vocals">On Guitar and Vocals:</string>
+  <string name="on_bass_and_chorus">On Bass and Chorus:</string>
+  <string name="on_guitar">On Guitars:</string>
+  <string name="on_guitar_and_chorus">On Guitars and Chorus:</string>
+  <string name="on_percussion">On Percussion:</string>
+  <string name="on_drums_and_chorus">On Drums and Chorus:</string>
+  <string name="on_acoustic_guitar">On Acoustic Guitars:</string>
+
+  <string name="lucas_aragon">Lucas Aragon</string>
+  <string name="mauro_g_mez">Mauro Gómez</string>
+  <string name="diego_robles">Diego Robles</string>
+  <string name="maximiliano_navarro">Maximiliano Navarro</string>
+  <string name="lucas_videla">Lucas Videla</string>
+  <string name="guillermo_guerra">Guillermo Guerra</string>
+  <string name="lucho_arrieta">Lucho Arrieta</string>
+  <string name="record_place">Estudios \'Lucho Arrieta\'</string>
+  <string name="rodrigo_grasetti">Rodrigo Grasetti</string>
+
+  <string name="mastering">Mastering:</string>
+  <string name="recorded_and_mixed">Recorded and Mixed:</string>
+  <string name="mixing_technicians">Mixing Technicians:</string>
+  <string name="musical_production">Musical Production:</string>
+  <string name="artists_invited_to_play">Artists invited to play</string>
+  <string name="on_Cicatrices_album">on “Cicatrices” album</string>
+
+  <!-- DISK DATA -->
+  <string-array name="disk_names">
+    <item>Cicatrices</item>
+  </string-array>
+  <string-array name="disk_ids">
+    <item>1</item>
+  </string-array>
+
+  <string-array name="begin_dates">
+    <item>1498878000000</item>
+  </string-array>
+
+  <string-array name="end_dates">
+    <item>1527822000000</item>
+  </string-array>
+
+  <!-- TRACK DATA -->
+  <string-array name="trak_disk_ids">
+    <item>1</item>
+    <!--<item>2</item>-->
+  </string-array>
+
   <string-array name="track_names">
     <item>Cicatrices</item>
-    <!--<item>Hermoso sueño</item>-->
+    <!--<item>Mitomanias para el corazón</item>-->
   </string-array>
 
   <string-array name="track_lyrics">
-    <item>Es lo que dices,
-lo que significan,
-camino entre vosotros
-pero no soy
-uno de ustedes.
-Es tu forma de explicar
-lo inexplicable,
-es tu forma de ser
-inculta.
+    <item>Es lo que dices, lo que significa
+Camino entre vosotros, pero no soy uno de ustedes
+Es tu forma de explicar, lo inexplicable
+Es tu forma de ser inculta.
 
-Me pediste un tiempo.
-Voy a seguir esperandote.
-Y aunque una vez lo pensé,
-solo no voy a quedarme.
-Porque tengo mi guitarra
-y mi voz
-Y por supuesto las palabras
-del señor John.
+Me pediste un tiempo, voy a seguir esperándote
+Y aunque alguna vez lo pensé, solo no voy a quedarme
+Porque tengo mi guitarra, y mi voz
+Y por supuesto las palabras, del señor Young.
 
-El valor
-no es la ausencia del miedo,
-pero la sangre azul
-llena de cicatrices:
-Es un concepto vago de lo que hiciste.
-Tengo una bala en el cargador y voy a disparar hacia delante.
+El valor, no es la ausencia del miedo
+Tengo la sangre azul, llena de cicatrices
+Es un concepto vago, de lo que hiciste
+Tengo una bala en el cargador, y voy a disparar hacia delante
 
-Es tu forma de explicar
-lo inexplicable,
-es tu forma de ser
-inculta:
-Carente de experiencia
-e ilusa.
-Enfrento a la muerte y soy quien propicia mi suerte.</item>
-
+Es tu forma de explicar lo inexplicable
+Es tu forma de ser inculta
+Carente de experiencia e ilusa
+Enfrento a la muerte
+Y soy quien propicia mi suerte.</item>
   </string-array>
-
+  <string name="title_activity_disks">DisksActivity</string>
 
 </resources>

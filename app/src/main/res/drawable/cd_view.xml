@@ -1,0 +1,40 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- larger circle at the back-->
+  <item
+    android:gravity="center"
+    android:height="160dp"
+    android:width="160dp">
+    <shape android:shape="oval">
+      <solid android:color="#00000000" />
+      <stroke
+        android:color="#000000"
+        android:width="65dp" />
+    </shape>
+  </item>
+
+  <!--inner circle -->
+  <item
+    android:gravity="center"
+    android:height="160dp"
+    android:width="160dp">
+    <shape android:shape="oval">
+      <solid android:color="#00000000" />
+      <stroke
+        android:color="#ffffff"
+        android:width="5dp" />
+    </shape>
+  </item>
+
+  <item
+    android:gravity="center"
+    android:height="35dp"
+    android:width="35dp">
+    <shape android:shape="oval">
+      <solid android:color="#00000000" />
+      <stroke
+        android:color="#ffffff"
+        android:width="8dp" />
+    </shape>
+  </item>
+
+</layer-list>

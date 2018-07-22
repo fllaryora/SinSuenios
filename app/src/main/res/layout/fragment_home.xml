@@ -4,34 +4,553 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:orientation="vertical">
-  <android.support.constraint.ConstraintLayout
+  android:orientation="vertical" >
+  <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ImageView
-      android:id="@+id/imageView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      app:layout_constraintHorizontal_bias="0.5"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintBottom_toTopOf="@+id/band_info"
-      app:srcCompat="@drawable/sin_suenio" />
-
-    <TextView
-      android:id="@+id/band_info"
+    <!-- Header -->
+    <android.support.constraint.ConstraintLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="@string/band_text_info"
-      android:textColor="@color/colorWhite"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      android:paddingTop="15dp"
+      android:paddingBottom="15dp"
+      android:paddingStart="10dp"
+      android:paddingEnd="10dp"
+
+      android:background="#736667"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline_header_sangria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.37" />
+
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline_header_sangria_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
+
+      <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_header_sangria"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/sin_suenio" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/band_info"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:textStyle="italic|bold"
+        android:text="@string/band_text_info"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_header_sangria_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline_header_sangria"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!-- Integrantes -->
+    <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      android:paddingBottom="15dp"
+      android:paddingTop="15dp"
+      android:background="#736667"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline_members"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.14" />
+
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline_members_sangria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline_members_sangria_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.26" />
+
+      <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="20dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds ="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_members"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/info" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/members_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/band_members"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/guideline_members" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/members_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/on_guitar_and_vocals"
+        android:textStyle="italic"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/members_title"
+        app:layout_constraintStart_toEndOf="@+id/guideline_members_sangria" />
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/members_content_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lucas_aragon"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/members_content"
+        app:layout_constraintStart_toEndOf="@+id/guideline_members_sangria_2" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/members_content_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/on_bass_and_chorus"
+        android:textStyle="italic"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/members_content_2"
+        app:layout_constraintStart_toEndOf="@+id/guideline_members_sangria" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/members_content_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mauro_g_mez"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/members_content_3"
+        app:layout_constraintStart_toEndOf="@+id/guideline_members_sangria_2" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/members_content_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/on_guitar"
+        android:textStyle="italic"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/members_content_4"
+        app:layout_constraintStart_toEndOf="@+id/guideline_members_sangria" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/members_content_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/diego_robles"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/members_content_5"
+        app:layout_constraintStart_toEndOf="@+id/guideline_members_sangria_2" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!-- Invitados -->
+    <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      android:paddingBottom="15dp"
+      android:paddingTop="15dp"
+      android:background="#736667"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline_guests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.14" />
+
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline_guests_sangria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline_guests_sangria_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.26" />
+
+      <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="20dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds ="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_guests"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/info" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/guests_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/artists_invited_to_play"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/guideline_guests" />
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/guests_title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/on_Cicatrices_album"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/guests_title"
+        app:layout_constraintStart_toEndOf="@+id/guideline_guests" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/guests_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/on_guitar_and_chorus"
+        android:textStyle="italic"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/guests_title_2"
+        app:layout_constraintStart_toEndOf="@+id/guideline_guests_sangria" />
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/guests_content_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/maximiliano_navarro"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/guests_content"
+        app:layout_constraintStart_toEndOf="@+id/guideline_guests_sangria_2" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/guests_content_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/on_drums_and_chorus"
+        android:textStyle="italic"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/guests_content_2"
+        app:layout_constraintStart_toEndOf="@+id/guideline_guests_sangria" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/guests_content_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lucas_videla"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/guests_content_3"
+        app:layout_constraintStart_toEndOf="@+id/guideline_guests_sangria_2" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/guests_content_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/on_percussion"
+        android:textStyle="italic"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/guests_content_4"
+        app:layout_constraintStart_toEndOf="@+id/guideline_guests_sangria" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/guests_content_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guillermo_guerra"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/guests_content_5"
+        app:layout_constraintStart_toEndOf="@+id/guideline_guests_sangria_2" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/guests_content_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/on_acoustic_guitar"
+        android:textStyle="italic"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/guests_content_6"
+        app:layout_constraintStart_toEndOf="@+id/guideline_guests_sangria" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/guests_content_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lucho_arrieta"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/guests_content_7"
+        app:layout_constraintStart_toEndOf="@+id/guideline_guests_sangria_2" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!-- PRODUCTORES -->
+    <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      android:paddingBottom="15dp"
+      android:paddingTop="15dp"
+      android:background="#736667"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline_production"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.14" />
+
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline_production_sangria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+      <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="20dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds ="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_production"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/info" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/musical_production_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/musical_production"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/guideline_production" />
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/musical_production_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/diego_robles"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/musical_production_title"
+        app:layout_constraintStart_toEndOf="@+id/guideline_production_sangria" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/technical_mix_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/mixing_technicians"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/musical_production_content"
+        app:layout_constraintStart_toEndOf="@+id/guideline_production" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/technical_mix_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lucas_videla"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/technical_mix_title"
+        app:layout_constraintStart_toEndOf="@+id/guideline_production_sangria" />
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/technical_mix_content_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lucho_arrieta"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/technical_mix_content"
+        app:layout_constraintStart_toEndOf="@+id/guideline_production_sangria" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/record_place_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/recorded_and_mixed"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/technical_mix_content_2"
+        app:layout_constraintStart_toEndOf="@+id/guideline_production" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/record_place_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/record_place"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/record_place_title"
+        app:layout_constraintStart_toEndOf="@+id/guideline_production_sangria" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!-- Masterizado -->
+    <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      android:paddingBottom="15dp"
+      android:paddingTop="15dp"
+      android:background="#736667"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline_masterized"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.14" />
+
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline_masterized_sangria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+      <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="20dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds ="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_masterized"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/info" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/masterized_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/mastering"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/guideline_masterized" />
+
+      <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/masterized_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rodrigo_grasetti"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/masterized_title"
+        app:layout_constraintStart_toEndOf="@+id/guideline_masterized_sangria" />
+    </android.support.constraint.ConstraintLayout>
+
+<!-- DISCLAMER -->
+    <android.support.v7.widget.AppCompatTextView
+      android:background="#b8000000"
+      android:id="@+id/disclamer_text"
       android:textAlignment="center"
-      android:textSize="30sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/imageView"
-      android:visibility="gone"/>
-  </android.support.constraint.ConstraintLayout>
+      android:layout_marginTop="15dp"
+      android:paddingStart="10dp"
+      android:paddingEnd="10dp"
+      android:paddingBottom="15dp"
+      android:paddingTop="15dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/disclamer"
+      android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+      android:textColor="@color/colorWhite"
+      android:textSize="16sp" />
+
+  </LinearLayout>
+
 </android.widget.ScrollView>

@@ -8,8 +8,8 @@
 
   <item
     android:id="@+id/navigation_dashboard"
-    android:icon="@drawable/rock_2"
-    android:title="@string/title_dashboard" />
+    android:icon="@drawable/cd_room"
+    android:title="@string/title_disks" />
 
   <item
     android:id="@+id/navigation_notifications"
