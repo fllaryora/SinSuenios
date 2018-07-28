@@ -4,10 +4,13 @@ import android.graphics.Color
 import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.graphics.Typeface
+import android.os.Build
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
+import android.transition.Explode
+import android.transition.Fade
 import android.view.Window
 import android.widget.TextView
 import rock.sinsuenios.R
@@ -25,11 +28,11 @@ class MainActivity : AppCompatActivity() {
     private var mPrevMenuItem: MenuItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val appName: TextView = findViewById(R.id.text_app_name) as TextView
-        val typeface = Typeface.createFromAsset(assets, "title.ttf")
+        val appName = findViewById<TextView>(R.id.text_app_name)
+        val typeface = Typeface.createFromAsset(assets, getString(R.string.app_typeface))
         appName.typeface = typeface
         val shader = LinearGradient(
                 0f, 0f, 0f, appName.textSize,
@@ -38,6 +41,8 @@ class MainActivity : AppCompatActivity() {
         )
         appName.paint.shader = shader
         setupBottomNavigation()
+        //animations for api >= 21
+        setupWindowAnimations()
     }
 
     private fun setupBottomNavigation() {
@@ -45,8 +50,8 @@ class MainActivity : AppCompatActivity() {
         mNavigationAdapter.addPage(HomeFragment.newInstance(), getString(R.string.title_home))
         mNavigationAdapter.addPage(DashboardFragment.newInstance(), getString(R.string.title_dashboard))
         mNavigationAdapter.addPage(NotificationFragment.newInstance(), getString(R.string.title_notifications))
-        mViewPager = findViewById(R.id.viewpager) as ViewPager
-        mBottomNavigationView = findViewById(R.id.bottom_navigation) as BottomNavigationView
+        mViewPager = findViewById<ViewPager>(R.id.viewpager)
+        mBottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         mViewPager.adapter = mNavigationAdapter
 
         mBottomNavigationView.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -83,6 +88,21 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
+    }
+
+    private fun setupWindowAnimations() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+            // A (this,general activity) --> B ((detail activity))
+            val explode = Explode()
+            explode.duration = 2000
+            window.exitTransition = explode
+
+            // A (this,general activity) <-- B ((detail activity))
+            val fade = Fade()
+            fade.duration = 2000
+            window.reenterTransition = fade
+        }
     }
 
 }

@@ -7,7 +7,8 @@
   android:layout_marginBottom="30dp"
   android:layout_marginLeft="20dp"
   android:layout_marginRight="20dp"
-  android:background="@drawable/rock_background"
+  android:clickable="true"
+  android:focusable="true"
   app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
   <android.support.constraint.Guideline
@@ -33,7 +34,7 @@
 
 
   <android.support.v7.widget.AppCompatTextView
-    android:id="@+id/ticket_title"
+    android:id="@+id/cd_room_title"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Cicatrices"
@@ -42,7 +43,7 @@
     android:textStyle="italic|bold"
     android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
     android:textColor="#ff0000"
-    android:textSize="27sp"
+    android:textSize="51sp"
     app:layout_constraintBottom_toTopOf="@id/guideline"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.5"

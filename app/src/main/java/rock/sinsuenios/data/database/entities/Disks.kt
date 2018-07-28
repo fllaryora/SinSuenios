@@ -12,10 +12,10 @@ import java.util.*
 data class Disks(
         /*@PrimaryKey(autoGenerate = true) @ColumnInfo(name = Constant.ID_FIELD) var id: Long?,*/
         @PrimaryKey @ColumnInfo(name = Constant.ID_FIELD) var id: Long,
-                  @ColumnInfo(name = Constant.DISK_NAME_FIELD) var trackName: String,
-                  @ColumnInfo(name = Constant.BEGIN_DATE_FIELD) var beginDate: Date,
-                  @ColumnInfo(name = Constant.END_DATE_FIELD) var endDate: Date,
-                  var lastRefresh: Date) {
+        @ColumnInfo(name = Constant.DISK_NAME_FIELD) var diskName: String,
+        @ColumnInfo(name = Constant.BEGIN_DATE_FIELD) var beginDate: Date,
+        @ColumnInfo(name = Constant.END_DATE_FIELD) var endDate: Date,
+        var lastRefresh: Date) {
 
     /**
      * Used in pagining

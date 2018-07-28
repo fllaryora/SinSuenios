@@ -1,8 +1,8 @@
-package rock.sinsuenios.presentation.show_dashboard.listing
+package rock.sinsuenios.presentation.disks.show_song.listing
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import android.support.v7.widget.AppCompatImageView
+//import android.support.v7.widget.AppCompatImageView
 import android.support.v7.widget.AppCompatTextView
 import rock.sinsuenios.R
 import rock.sinsuenios.data.database.entities.Tracks

@@ -6,28 +6,25 @@ import android.arch.lifecycle.ViewModel
 import android.arch.paging.LivePagedListBuilder
 import rock.sinsuenios.SinSueniosApplication
 import rock.sinsuenios.data.database.AppDatabase
-import rock.sinsuenios.data.database.entities.Tracks
+import rock.sinsuenios.data.database.entities.Disks
 
-class TrackViewModel : ViewModel() {
+class DiskViewModel : ViewModel() {
 
-    internal val trackList: LiveData<PagedList<Tracks>>
+    internal val disksList: LiveData<PagedList<Disks>>
 
     init {
-        val tracksDAO = AppDatabase.getAppDatabase(SinSueniosApplication.applicationContext())!!.tracksDAO()
+        val disksDAO = AppDatabase.getAppDatabase(SinSueniosApplication.applicationContext())!!.disksDAO()
         val pagedListConfig : PagedList.Config = PagedList.Config.Builder()
                 .setEnablePlaceholders(true)
                 .setInitialLoadSizeHint(INITIAL_LOAD_KEY)
                 .setPrefetchDistance(PREFETCH_DISTANCE)
                 .setPageSize(PAGE_SIZE).build()
-
-        trackList = LivePagedListBuilder( tracksDAO.tracks(), pagedListConfig).build()
-
+        disksList = LivePagedListBuilder( disksDAO.disks(), pagedListConfig).build()
     }
 
     companion object {
-
-        private val INITIAL_LOAD_KEY = 0
-        private val PAGE_SIZE = 20
-        private val PREFETCH_DISTANCE = 5
+        private const val INITIAL_LOAD_KEY = 0
+        private const val PAGE_SIZE = 20
+        private const val PREFETCH_DISTANCE = 5
     }
 }

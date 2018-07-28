@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import rock.sinsuenios.R
 import rock.sinsuenios.SinSueniosApplication.Companion.applicationContext
 import rock.sinsuenios.data.database.entities.Tracks
+import rock.sinsuenios.presentation.disks.show_song.listing.TrackViewHolder
 
 class TrackAdapter:PagedListAdapter<Tracks, TrackViewHolder>(Tracks.diffUtil) {
 
@@ -21,7 +22,6 @@ class TrackAdapter:PagedListAdapter<Tracks, TrackViewHolder>(Tracks.diffUtil) {
         } else {
             holder.clear()
         }
-
 
     }
 }
