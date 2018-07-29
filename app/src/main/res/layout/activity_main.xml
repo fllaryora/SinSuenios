@@ -5,6 +5,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:background="@drawable/rock_background"
+  android:theme="@style/AppTheme.NoActionBar"
   tools:context=".presentation.MainActivity">
 
   <android.support.design.widget.CoordinatorLayout

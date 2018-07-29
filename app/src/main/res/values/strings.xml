@@ -94,6 +94,8 @@ Y soy quien propicia mi suerte.</item>
   <string name="app_typeface">title.ttf</string>
   <string name="cd_room_typeface">card_name.ttf</string>
   <string name="EXTRA_DISK_TITLE">DISK_TITLE</string>
+  <string name="EXTRA_DISK_ID">DISK_ID</string>
   <string name="EXTRA_DEFAULT">no title</string>
+  <string name="transition_disk_name_title">transition_disk_name_title</string>
 
 </resources>

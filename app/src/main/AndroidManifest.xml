@@ -16,7 +16,8 @@
     android:theme="@style/Theme.AppCompat.Light.NoActionBar">
     <activity
       android:label="@string/app_name"
-      android:name=".presentation.MainActivity">
+      android:name=".presentation.MainActivity"
+      android:theme="@style/AppTheme.NoActionBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +27,7 @@
     <activity
       android:label="@string/title_activity_disks"
       android:name=".presentation.disks.DisksActivity"
-      android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+      android:theme="@style/AppTheme.NoActionBar"/>
   </application>
 
 </manifest>

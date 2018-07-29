@@ -10,6 +10,7 @@
 
   <TextView
     android:id="@+id/text_disk_name"
+    android:transitionName="@string/transition_disk_name_title"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textColor="@color/colorAccent"

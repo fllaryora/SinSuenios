@@ -11,6 +11,8 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.transition.Explode
 import android.transition.Fade
+import android.transition.Slide
+import android.view.Gravity
 import android.view.Window
 import android.widget.TextView
 import rock.sinsuenios.R
@@ -94,14 +96,18 @@ class MainActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 
             // A (this,general activity) --> B ((detail activity))
-            val explode = Explode()
-            explode.duration = 2000
-            window.exitTransition = explode
+            val slide = Slide(Gravity.LEFT)
+            slide.duration = 500
+            window.exitTransition = slide
 
             // A (this,general activity) <-- B ((detail activity))
             val fade = Fade()
-            fade.duration = 2000
+            fade.duration = 1000
             window.reenterTransition = fade
+
+            //shared element exit transition
+            // A (this,general activity) --> B ((detail activity))
+            //window.sharedElementExitTransition =
         }
     }
 

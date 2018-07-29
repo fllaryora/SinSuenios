@@ -11,6 +11,8 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.transition.Explode
 import android.transition.Fade
+import android.transition.Slide
+import android.view.Gravity
 import android.view.MenuItem
 import android.view.Window
 import android.widget.TextView
@@ -34,7 +36,7 @@ class DisksActivity : AppCompatActivity() {
         val title : String = intent.getStringExtra(getString(R.string.EXTRA_DISK_TITLE))
         val textDiskName: TextView = findViewById<TextView>(R.id.text_disk_name)
         textDiskName.text = title
-        val typeface = Typeface.createFromAsset(assets, "title.ttf")
+        val typeface = Typeface.createFromAsset(assets, getString(R.string.cd_room_typeface))
         textDiskName.typeface = typeface
         val shader = LinearGradient(
                 0f, 0f, 0f, textDiskName.textSize,
@@ -89,14 +91,18 @@ class DisksActivity : AppCompatActivity() {
     private fun setupWindowAnimations() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             // A (general activity) --> B ((this , detail activity))
-            val explode = Explode()
-            explode.duration = 2000
-            window.enterTransition = explode
+            val slide = Slide(Gravity.LEFT)
+            slide.duration = 500
+            window.enterTransition = slide
 
             // A (general activity) <-- B ((this, detail activity))
             val fade = Fade()
-            fade.duration = 2000
+            fade.duration = 1000
             window.returnTransition = fade
+
+            //shared element enter transition
+            // A (general activity) --> B ((this , detail activity))
+            //window.sharedElementEnterTransition =
         }
     }
 
