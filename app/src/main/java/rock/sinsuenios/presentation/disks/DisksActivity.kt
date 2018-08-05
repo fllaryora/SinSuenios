@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
-import android.transition.Explode
 import android.transition.Fade
 import android.transition.Slide
 import android.view.Gravity
@@ -32,7 +31,6 @@ class DisksActivity : AppCompatActivity() {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_disks)
-        //TODO Null pointer exception aca
         val title : String = intent.getStringExtra(getString(R.string.EXTRA_DISK_TITLE))
         val textDiskName: TextView = findViewById<TextView>(R.id.text_disk_name)
         textDiskName.text = title

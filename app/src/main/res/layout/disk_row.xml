@@ -26,24 +26,26 @@
 
   <android.support.v7.widget.AppCompatImageView
     android:id="@+id/ticket_image"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="250dp"
+    android:layout_height="250dp"
     android:adjustViewBounds="true"
     android:scaleType="fitCenter"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
     app:srcCompat="@drawable/cd_view" />
 
 
   <android.support.v7.widget.AppCompatTextView
     android:id="@+id/cd_room_title"
+    android:textStyle="italic|bold"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Cicatrices"
     android:fontFamily="serif"
     android:textAlignment="center"
-    android:textStyle="italic|bold"
     android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
     android:textColor="#ff0000"
-    android:textSize="51sp"
+    android:textSize="30sp"
     app:layout_constraintBottom_toTopOf="@id/guideline"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.5"

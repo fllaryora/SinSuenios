@@ -13,6 +13,7 @@ class TrackViewModel : ViewModel() {
     internal val trackList: LiveData<PagedList<Tracks>>
 
     init {
+
         val tracksDAO = AppDatabase.getAppDatabase(SinSueniosApplication.applicationContext())!!.tracksDAO()
         val pagedListConfig : PagedList.Config = PagedList.Config.Builder()
                 .setEnablePlaceholders(true)

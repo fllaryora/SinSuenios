@@ -11,7 +11,7 @@ import rock.sinsuenios.presentation.disks.show_song.listing.TrackViewHolder
 class TrackAdapter:PagedListAdapter<Tracks, TrackViewHolder>(Tracks.diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrackViewHolder {
-        val itemView = LayoutInflater.from(applicationContext()).inflate(R.layout.card_row, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.card_row, parent, false)
         return TrackViewHolder(itemView)
     }
 

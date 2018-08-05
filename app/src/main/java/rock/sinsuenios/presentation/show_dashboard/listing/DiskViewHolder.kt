@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.graphics.Typeface
+import android.os.Build
 import android.os.Bundle
 import android.support.v7.widget.AppCompatTextView
 import android.support.v7.widget.RecyclerView
@@ -55,16 +56,20 @@ class DiskViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView), View.
 
     override fun onClick(view: View?) {
         if (view != null) {
-            val intent: Intent = Intent(view.context, DisksActivity::class.java)
+            val intent: Intent = Intent(itemView.context, DisksActivity::class.java)
             val bundle: Bundle = Bundle()
-            val sharedView: View = itemView.findViewById(R.id.cd_room_title)
             bundle.putString(view.context.getString(R.string.EXTRA_DISK_ID), itemView.tag.toString())
             bundle.putString(view.context.getString(R.string.EXTRA_DISK_TITLE), cdRoomTextView!!.text.toString())
             intent.putExtras(bundle)
-            val transitionName: String  = view.context.getString(R.string.transition_disk_name_title)
-            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                    view.context as Activity, sharedView, transitionName)
-            view.context.startActivity(intent,options.toBundle())
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                val sharedView: View = itemView.findViewById(R.id.cd_room_title)
+                val transitionName: String  = itemView.context.getString(R.string.transition_disk_name_title)
+                val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                        itemView.context as Activity, sharedView, transitionName)
+                itemView.context.startActivity(intent,options.toBundle())
+            } else {
+                itemView.context.startActivity(intent)
+            }
         }
 
     }

@@ -7,10 +7,21 @@
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
     <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
+    <item name="cardViewStyle">@style/CardView</item>
   </style>
 
   <style name="AppTheme.NoActionBar">
     <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
+    <item name="cardViewStyle">@style/CardView</item>
+  </style>
+
+  <style name="SeekBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">#ef0e0e</item>
+    <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
+    <item name="cardViewStyle">@style/CardView</item>
   </style>
 
 </resources>

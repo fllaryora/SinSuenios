@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- https://www.codexpedia.com/android/android-material-design-for-ripple-effect-on-click/ -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+  android:color="@color/colorPrimaryDark">
+  <item>
+    <shape>
+      <padding android:padding="1dp" />
+      <corners android:radius="5dp" />
+      <solid android:color="@color/colorPrimary" />
+    </shape>
+  </item>
+</ripple>

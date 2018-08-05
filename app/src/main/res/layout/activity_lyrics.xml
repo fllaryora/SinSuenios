@@ -5,26 +5,17 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:id="@+id/root_layout"
   android:background="@drawable/rock_background"
+  android:fitsSystemWindows="true"
   android:theme="@style/AppTheme.NoActionBar"
-  tools:context=".presentation.disks.DisksActivity">
+  tools:context=".presentation.lyrics.LyricsActivity">
 
   <android.support.design.widget.CoordinatorLayout
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
-    android:layout_above="@+id/disk_bottom_navigation"
     android:layout_height="match_parent">
-    <include layout="@layout/content_disks" />
+    <include layout="@layout/content_lyric" />
 
   </android.support.design.widget.CoordinatorLayout>
-  <android.support.design.widget.BottomNavigationView
-    android:id="@+id/disk_bottom_navigation"
-    android:layout_alignParentBottom="true"
-    android:layout_width="match_parent"
-    android:layout_height="56dp"
-    app:itemBackground="@color/colorPrimaryDark"
-    app:itemIconTint="@drawable/nav_item_colors"
-    app:itemTextColor="@drawable/nav_text_colors"
-    app:elevation="8dp"
-    app:menu="@menu/disk_navigation" />
 </RelativeLayout>
