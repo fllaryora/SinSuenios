@@ -4,7 +4,6 @@
   android:layout_height="80dp"
   android:padding="10dp"
   android:background="@color/colorPrimaryDark"
-  android:layout_marginBottom="10dp"
   android:layout_below="@+id/song_info_artist"
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto">
