@@ -108,5 +108,8 @@ Y soy quien propicia mi suerte.</item>
   <string name="transition_disk_name_title">transition_disk_name_title</string>
   <!--from track list to track details -->
   <string name="transition_track_name_title">transition_track_name_title</string>
+    <string name="failure_network_connection">There is not Networl connection</string>
+  <string name="failure_list_unavailable">The list is unavailable</string>
+  <string name="failure_server_error">The server is not available in this moment</string>
 
 </resources>

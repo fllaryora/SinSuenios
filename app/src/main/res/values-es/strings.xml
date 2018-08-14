@@ -26,5 +26,8 @@
   <string name="artists_invited_to_play">Artistas invitados para tocar</string>
   <string name="on_Cicatrices_album">en el Disco “Cicatrices”</string>
   <string name="disks">Discos</string>
+    <string name="failure_network_connection">There is not Networl connection</string>
+  <string name="failure_list_unavailable">The list is unavailable</string>
+  <string name="failure_server_error">The server is not available in this moment</string>
 
 </resources>

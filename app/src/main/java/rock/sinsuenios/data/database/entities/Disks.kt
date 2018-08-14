@@ -5,7 +5,7 @@ import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 import android.support.v7.util.DiffUtil
 import rock.sinsuenios.data.util.Constant
-import java.util.*
+import java.util.Date
 
 
 @Entity(tableName = Constant.DISK_TABLE)

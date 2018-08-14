@@ -9,7 +9,7 @@ import rock.sinsuenios.R
 import rock.sinsuenios.data.database.entities.Disks
 import rock.sinsuenios.data.database.entities.Tracks
 import rock.sinsuenios.data.database.mapper.TrackMapper
-import java.util.*
+import java.util.Date
 import kotlin.collections.ArrayList
 
 class BandPopulator(context: Context) {

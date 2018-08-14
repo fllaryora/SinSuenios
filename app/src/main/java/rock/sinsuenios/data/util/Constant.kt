@@ -15,6 +15,10 @@ class Constant {
         const val BEGIN_DATE_FIELD = "begin_date"
         const val END_DATE_FIELD = "end_date"
 
+        const val MUSIC_TOTAL_TIME = "total_time"
+        const val MUSIC_REMAINING_TIME = "remaining_time"
+        const val MUSIC_CURRENT_TIME = "current_time"
+        const val UI_PROGRESSBAR_MAX_VALUE = "max_value"
 
     }
 }

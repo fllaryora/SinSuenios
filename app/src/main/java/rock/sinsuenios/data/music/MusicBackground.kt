@@ -5,6 +5,7 @@ import android.media.AudioAttributes
 import android.media.AudioManager
 import android.media.MediaPlayer
 import android.os.Build
+import rock.sinsuenios.data.util.Constant
 
 //@Suppress("DEPRECATION")
 //setAudioStreamType is deprecated in api 26
@@ -30,13 +31,13 @@ class MusicBackground(mContext : Context, mMusicResource :Int) {
         }
     }
 
-    public fun onPause() {
+    fun onPause() {
         if (mMediaPlayer.isPlaying) {
             mMediaPlayer.pause()
         }
     }
 
-    public fun onDestroy() {
+    fun onDestroy() {
         if (mMediaPlayer.isPlaying) {
             mMediaPlayer.stop()
         }
@@ -44,29 +45,34 @@ class MusicBackground(mContext : Context, mMusicResource :Int) {
     }
 
     //onResume or further
-    public fun play() {
-        mMediaPlayer.start()
+    fun playPause() : Boolean{
+        if (mMediaPlayer.isPlaying) {
+            mMediaPlayer.pause()
+        } else {
+            mMediaPlayer.start()
+        }
+        return mMediaPlayer.isPlaying
     }
 
-    //onResume or further
-    public fun pause() {
-        mMediaPlayer.pause()
+    fun setLoop() : Boolean{
+        var newBoolean : Boolean =  !mMediaPlayer.isLooping
+        mMediaPlayer.isLooping = !mMediaPlayer.isLooping
+        return newBoolean
     }
 
-    public fun setLoop(loop: Boolean) {
-        mMediaPlayer.isLooping = loop
+
+     fun getCurrentStatus(maxProgress:Int): HashMap<String, Any> {
+         val status : HashMap<String, Any> = hashMapOf(
+                 Constant.MUSIC_CURRENT_TIME        to  mMediaPlayer.currentPosition,
+                 Constant.MUSIC_REMAINING_TIME      to (mMediaPlayer.duration - mMediaPlayer.currentPosition),
+                 Constant.MUSIC_TOTAL_TIME          to  mMediaPlayer.duration,
+                 Constant.UI_PROGRESSBAR_MAX_VALUE  to  maxProgress
+         )
+        return status
     }
 
-    public fun getRemainingTime(): Int {
-        return mMediaPlayer.currentPosition - mMediaPlayer.duration
-    }
-
-    public fun getCurrentPos(): Int {
-        return mMediaPlayer.currentPosition
-    }
-
-    public fun getTotalTime(): Int {
-        return mMediaPlayer.duration
+    fun seekTo(msec: Int) {
+        mMediaPlayer.seekTo(msec)
     }
 
 }

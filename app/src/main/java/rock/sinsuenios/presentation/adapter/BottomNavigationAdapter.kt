@@ -3,7 +3,6 @@ package rock.sinsuenios.presentation.adapter
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
-import java.util.*
 
 /**
  * I live this class because i can re-use it in different activities
