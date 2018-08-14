@@ -51,6 +51,7 @@ class LyricsActivity : AppCompatActivity() {
     private var amoungToupdate : Long = 0L
     private lateinit var mRunnable:Runnable
     private lateinit var mHandler: Handler
+    private lateinit var musicBackground : MusicBackground
 
     override fun onCreate(savedInstanceState: Bundle?) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -105,7 +106,7 @@ class LyricsActivity : AppCompatActivity() {
                 getString(R.string.EXTRA_TRACK_RESOURCE_MUSIC_IN_RAW), 0))!!.trackResource
 
         /**init the viewModel***/
-        val musicBackground = MusicBackground(this, musicResource)
+        musicBackground = MusicBackground(this, musicResource)
         val lyricFactory: LyricViewModelFactory = LyricViewModelFactory(musicBackground)
         viewModel = ViewModelProviders.of(this, lyricFactory).get(LyricViewModel::class.java)
         viewModel.failure.observe(this, Observer(this::handleFailure))
@@ -199,12 +200,6 @@ class LyricsActivity : AppCompatActivity() {
         return ORIENTATION_PORTRAIT == resources.configuration.orientation
     }
 
-    override fun onPause() {
-        super.onPause()
-        mHandler.removeCallbacks(mRunnable)
-        viewModel.onPause()
-    }
-
     override fun onResume() {
         super.onResume()
         mHandler.postDelayed(
@@ -216,14 +211,14 @@ class LyricsActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         mHandler.removeCallbacks(mRunnable)
-        viewModel.onDestroy()
+        if(isFinishing){
+            viewModel.onDestroy()
+        }
 
     }
 
     /******/
-
     private fun renderChangesInLyric(lyricView: LyricView?) {
-        //TODO refresco todos los cambios en la pantalla
         lyricView?.let{
             seekBar.progress = it.progress
             if (isPortrait()) {
@@ -234,7 +229,6 @@ class LyricsActivity : AppCompatActivity() {
                 }
                 songProgressMax?.text = remainingTime
             }
-
             var imageResource : Int = 0
             if (!it.isPlaying){
                 imageResource = R.drawable.play_btn
@@ -243,7 +237,6 @@ class LyricsActivity : AppCompatActivity() {
                 imageResource = R.drawable.pause_btn
             }
             playPauseBtn.setImageResource(imageResource)
-
             imageResource = if (it.isLooping) R.drawable.repeat_pressed_btn else R.drawable.repeat_btn
             repeatBtn.setImageResource(imageResource)
 
