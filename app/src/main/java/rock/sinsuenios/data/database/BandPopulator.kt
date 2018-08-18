@@ -81,7 +81,8 @@ class BandPopulator(context: Context) {
                 AppDatabase.getAppDatabase(mContext)!!.disksDAO().insert(disks)
             }
             getTrackList().forEach { track ->
-                AppDatabase.getAppDatabase(mContext)!!.tracksDAO().insert(track)
+                val trackId :Long = AppDatabase.getAppDatabase(mContext)!!.tracksDAO().insert(track)
+                Log.e(TAG, "Tracks  inserted: " + trackId)
             }
 
         }.subscribeOn(Schedulers.io())

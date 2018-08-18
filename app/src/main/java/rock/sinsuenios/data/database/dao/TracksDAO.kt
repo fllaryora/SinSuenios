@@ -15,7 +15,7 @@ interface TracksDAO {
     fun tracks(): DataSource.Factory<Int,Tracks>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(tracks: Tracks)
+    fun insert(tracks: Tracks): Long
 
     @Delete
     fun delete(tracks: Tracks)

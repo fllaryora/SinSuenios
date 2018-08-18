@@ -60,12 +60,24 @@
   <!-- TRACK DATA -->
   <string-array name="trak_disk_ids">
     <item>1</item>
-    <!--<item>2</item>-->
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </string-array>
 
   <string-array name="track_names">
     <item>Cicatrices</item>
-    <!--<item>Mitomanias para el corazón</item>-->
+    <item>Mitomanias para el corazón</item>
+    <item>Cuando el sol se va</item>
+    <item>Hermoso sueño</item>
+    <item>Pensando en ti</item>
+    <item>Quisiera saber</item>
+    <item>Te escribiré</item>
+    <item>Tu efecto</item>
   </string-array>
 
   <string-array name="track_lyrics">
@@ -89,6 +101,216 @@ Es tu forma de ser inculta\n
 Carente de experiencia e ilusa\n
 Enfrento a la muerte\n
 Y soy quien propicia mi suerte.</item>
+    <item>Escribiré mil canciones, ahora que no te tengo\n
+Tendré tiempo para hacer, lo que ya venía haciendo\n
+Tendré tiempo para estar, con la gente que más quiero\n
+Y de que me sirve eso, si es a ti a quien yo quiero.\n
+\n
+No me digas que no cuesta\n
+Como cuesta seguir\n
+Cuesta arriba esta mi vida\n
+Y no alcanzo a ver la cima\n
+\n
+Y no me digas que no cuesta\n
+Como cuesta seguir\n
+Cuesta arriba esta mi vida\n
+Y no alcanzo a ver la cima si vos.\n
+\n
+Me robaste el alma\n
+Me robaste la ilusión\n
+Te llevaste todos mis sueños\n
+Cargados en tu mochila\n
+De odio y de rencor\n
+Sabia me querías como poeta buen artista\n
+Actor de revistas, mitomanías para el corazón\n
+Pero lo que no sabía era que no me querías\n
+Realmente como soy…\n
+\n
+No me digas que no cuesta\n
+Como cuesta seguir\n
+Cuesta arriba esta mi vida\n
+Y no alcanzo a ver la cima\n
+Y no me digas que no cuesta\n
+Como cuesta seguir\n
+Cuesta arriba esta mi vida\n
+Y no alcanzo a ver la cima si vos.\n
+\n
+No me digas que no cuesta\n
+Como cuesta seguir\n
+Cuesta arriba esta mi vida\n
+Y no alcanzo a ver la cima sin vos.</item>
+    <item>
+      Cuando tu único amigo es la soledad \n
+Ya no hay nada en que creer o en que confiar \n
+Igual ya naciste, no hay más remedio a esta enfermedad \n
+Debes aprender a vivir feliz, junto a tu infelicidad \n
+\n
+Antes que esto nada era igual \n
+Recuerdo de algo que no fue nada \n
+Tú dulzura, alegría y bondad \n
+No se mas en que pensar.\n
+\n
+Si te fuiste como el agua entre mis manos \n
+Y me dejaste en la oscuridad \n
+Cuando el sol se va. \n
+\n
+Y como cuando el sol se va\n
+ Se va, se va\n
+Y me dejaste acá\n
+ En la oscuridad\n
+Y como cuando el sol se va\n
+ Se va, se va, \n
+Y me dejaste acá\n
+ En la oscuridad\n
+\n
+No sé si sabes, mi corazón me late \n
+Yo sé que es por algo más\n
+Cerrar mis ojos, llegar al fondo, buscar la solución para encontrar tu amor\n
+Complicado o no, buscare la forma de llegar a tu corazón\n
+\n
+ Tantos sueños y una realidad \n
+Solo déjate llevar y echarte a  andar\n
+Para que levantarse ahora \n
+Que no hay más remedio a esta enfermedad\n
+\n
+Si te fuiste como el agua entre mis manos \n
+Y me dejaste  en la oscuridad cuando el sol se va. \n
+Y como cuando el sol se va\n
+ Se va, se va\n
+Y me dejaste acá\n
+ En la oscuridad\n
+Y como cuando el sol se va\n
+ Se va, se va, \n
+Y me dejaste acá\n
+ En la oscuridad
+    </item>
+    <item>Es padrino del olvido, el dolor que creo en vos \n
+No es por venganza, pero sí, porque si.\n
+No me hables hoy, si mañana no voltearás ni a verme\n
+ Procura que esté dormido, cuando salgas por la puerta de atrás\n
+\n
+ Y así creeré, que fue un hermoso sueño \n
+Inventado en las enredaderas, de mis sábanas y tus piernas \n
+Inventado en las enredaderas, de mis sábanas y tus piernas\n
+\n
+ Seré caballero cuando hable de sexo, seré poeta cuando me refiera al amor\n
+Besare la niebla, para recordar los suyos \n
+Aunque más que suyos, fueron míos para ella \n
+De la mano de tu olvido, te llevaste algo de mí\n
+Pienso algún día, en ir a pedirlo \n
+Aunque ya no recuerdo, ni lo que perdí\n
+\n
+Y así creeré, que fue un hermoso sueño \n
+Inventado en las enredaderas, de mis sábanas y tus piernas\n
+Inventado en las enredaderas, de mis sábanas y tus piernas\n
+\n
+Yo estoy bien, como siempre  \n
+En los mismos bares y en los mismos tragos \n
+Con la misma gente, que hoy, ahora y por siempre \n
+Ya no se atreverá ni a hablar\n
+\n
+Y así creeré, que fue un hermoso sueño \n
+Inventado en las enredaderas, de mis sábanas y tus piernas\n
+ Inventado en las enredaderas, de mis sábanas y tus piernas</item>
+    <item>Cuando, sientas que tu corazón está confundido \n
+Dale, un bofetón\n
+Cuando, sientas que el tiempo ya no es el mismo \n
+Ponle pausa a ese reloj\n
+\n
+Porque es hora de empezar de nuevo\n
+ Sentarse un rato a reflexionar\n
+No es cuestión de pensar,  en lo que pudo haber sido y lo que fue \n
+Porque agua que no has de beber, déjala correr \n
+\n
+Debo de seguro estar enamorándome\n
+Debo de seguro estar, pensando en vos \n
+Debo de seguro otra vez \n
+Estar pensando en ti, pensando en ti… sin mí.\n
+\n
+Sácame, de esta duda \n
+Dime si soy yo el culpable\n
+¿Qué hare cuando te vayas?\n
+Dime si es el amor lo que se muere\n
+ O soy yo el que se mata \n
+\n
+Porque es hora de empezar de nuevo\n
+ Sentarse un rato a reflexionar\n
+No es cuestión de pensar,  en lo que pudo haber sido y lo que fue \n
+Porque agua que no has de beber, déjala correr \n
+\n
+Debo de seguro estar, enamorándome\n
+Debo de seguro estar, pensando en vos \n
+Debo de seguro otra vez \n
+Estar pensando en ti, pensando en ti… sin mí.</item>
+    <item>Quisiera saber \n
+Si me has dejado de querer \n
+Quisiera saber\n
+Donde quedo nuestro amor \n
+\n
+Quizás lo guardas  \n
+En algún viejo rincón\n
+Quizás lo inmortalice \n
+En esta canción \n
+\n
+Quisiera saber si me has dejado de querer\n
+Quisiera saber\n
+Donde quedo nuestro amor \n
+\n
+Quizás lo guardas \n
+En algún viejo rincón\n
+ Quizás lo inmortalice \n
+En esta canción \n
+\n
+Quisiera saber quisiera saber…</item>
+    <item>Voy a escribirte una canción, para inmortalizarte\n
+Porque siento que, es bueno recordarte  \n
+\n
+Sé muy bien, que el tiempo de nuestro amor\n
+ Fue tan corto, siento que, me encanto\n
+ Sé muy bien, que hay rosas \n
+Que con sus espinas, formaron coronas en mi corazón \n
+\n
+Pero tú, la rosa más hermosa \n
+Que me acaricio, con sus pétalos \n
+Curando mi corazón, curándome por dentro\n
+Hoy vuelvo a creer en tus besos \n
+\n
+Voy a escribirte una canción, para inmortalizarte\n
+Porque siento que, es bueno recordarte \n
+\n
+ Escribiré, que es bueno tenerte en las mañanas\n
+ Cuando el sol cae en tu ventana\n
+ Escribiré, que te ame \n
+Aunque sea un instante yo te ame</item>
+    <item>Nos volvemos a encontrar, en la nada misma \n
+Y que encuentro tan casual, me empieza a fascinar \n
+\n
+Dimos tantas vueltas, para volvernos a encontrar \n
+No es casualidad, es tu efecto residual \n
+\n
+Se me hizo oscura, la oportunidad \n
+Y hasta el sol encandilo, a la más bella flor \n
+Puedo ver tus ojos ahogándose, en el mar más dulce entre tu piel y mi piel \n
+\n
+Hoy las estrellas te envidiaran \n
+Cuando te poses bajo la luna \n
+Hoy mi almohada te reclama \n
+Cuando te vas en la mañana\n
+\n
+Me preguntas, ¿por qué en vos tanto pienso? \n
+Tengo una locura que no puedo contener \n
+Dimos tantas vueltas, para volvernos a encontrar \n
+No es casualidad, es tu efecto residual \n
+\n
+Hoy las estrellas te envidiaran \n
+Cuando te poses bajo la luna\n
+Hoy mi almohada te reclama \n
+Cuando te vas en la mañana\n
+\n
+Hoy las estrellas te envidiaran \n
+Cuando te poses bajo la luna\n
+Hoy mi almohada te reclama \n
+Cuando te vas en la mañana</item>
   </string-array>
   <string name="title_activity_disks">DisksActivity</string>
   <string name="title_activity_lyrics">LyricsActivity</string>
