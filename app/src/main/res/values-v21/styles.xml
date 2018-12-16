@@ -10,8 +10,8 @@
     <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
     <!-- This line is the reason of this file -->
     <item name="android:windowContentTransitions">true</item>
-    <item name="android:windowAllowEnterTransitionOverlap">true</item>
-    <item name="android:windowAllowReturnTransitionOverlap">true</item>
+    <item name="android:windowAllowEnterTransitionOverlap">false</item>
+    <item name="android:windowAllowReturnTransitionOverlap">false</item>
     <item name="android:windowBackground">@drawable/background</item>
     <item name="cardViewStyle">@style/CardView</item>
   </style>
@@ -24,9 +24,8 @@
     <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
     <!-- This line is the reason of this file -->
     <item name="android:windowContentTransitions">true</item>
-    <item name="android:windowAllowEnterTransitionOverlap">true</item>
-    <item name="android:windowAllowReturnTransitionOverlap">true</item>
-
+    <item name="android:windowAllowEnterTransitionOverlap">false</item>
+    <item name="android:windowAllowReturnTransitionOverlap">false</item>
     <item name="android:windowBackground">@drawable/background</item>
     <item name="cardViewStyle">@style/CardView</item>
   </style>

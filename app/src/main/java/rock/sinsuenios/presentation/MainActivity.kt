@@ -4,9 +4,11 @@ import android.graphics.Color
 import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.graphics.Typeface
+import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.content.ContextCompat
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.transition.Fade
@@ -20,6 +22,7 @@ import rock.sinsuenios.presentation.show_dashboard.view.DashboardFragment
 import rock.sinsuenios.presentation.show_home.view.HomeFragment
 import rock.sinsuenios.presentation.show_notifications.view.NotificationFragment
 import android.view.MenuItem
+import android.view.animation.LinearInterpolator
 
 class MainActivity : AppCompatActivity() {
 
@@ -96,17 +99,16 @@ class MainActivity : AppCompatActivity() {
 
             // A (this,general activity) --> B ((detail activity))
             val slide = Slide(Gravity.LEFT)
-            slide.duration = 500
+            slide.duration = 200
+            slide.interpolator = LinearInterpolator()
+            slide.excludeTarget(android.R.id.statusBarBackground, true)
+            slide.excludeTarget(android.R.id.navigationBarBackground, true)
             window.exitTransition = slide
 
             // A (this,general activity) <-- B ((detail activity))
-            val fade = Fade()
-            fade.duration = 1000
-            window.reenterTransition = fade
-
-            //shared element exit transition
-            // A (this,general activity) --> B ((detail activity))
-            //window.sharedElementExitTransition =
+            window.reenterTransition = slide
+            window.setBackgroundDrawable(
+                    ColorDrawable(ContextCompat.getColor(this, R.color.colorPrimary)))
         }
     }
 
