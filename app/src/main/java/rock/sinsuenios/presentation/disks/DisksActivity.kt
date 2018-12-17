@@ -4,9 +4,11 @@ import android.graphics.Color
 import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.graphics.Typeface
+import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.content.ContextCompat
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.transition.Fade
@@ -14,6 +16,7 @@ import android.transition.Slide
 import android.view.Gravity
 import android.view.MenuItem
 import android.view.Window
+import android.view.animation.LinearInterpolator
 import android.widget.TextView
 import rock.sinsuenios.R
 import rock.sinsuenios.presentation.adapter.BottomNavigationAdapter
@@ -89,18 +92,18 @@ class DisksActivity : AppCompatActivity() {
     private fun setupWindowAnimations() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             // A (general activity) --> B ((this , detail activity))
-            val slide = Slide(Gravity.LEFT)
-            slide.duration = 500
+            val slide = Slide(Gravity.RIGHT)
+            slide.duration = 200
+            slide.interpolator = LinearInterpolator()
+            slide.excludeTarget(android.R.id.statusBarBackground, true);
+            slide.excludeTarget(android.R.id.navigationBarBackground, true);
             window.enterTransition = slide
 
             // A (general activity) <-- B ((this, detail activity))
-            val fade = Fade()
-            fade.duration = 1000
-            window.returnTransition = fade
+            window.returnTransition = slide
+            window.setBackgroundDrawable(
+                    ColorDrawable(ContextCompat.getColor(this, R.color.colorPrimary)))
 
-            //shared element enter transition
-            // A (general activity) --> B ((this , detail activity))
-            //window.sharedElementEnterTransition =
         }
     }
 
